@@ -1,0 +1,35 @@
+# Python cache & virtual envs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+condaenv.*
+
+# Git & local stuff
+.git
+.gitignore
+*.md
+*.log
+
+# Data
+data/
+
+# Tests 
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS / IDE junk
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Docker/meta files
+Dockerfile
+docker-compose.yml

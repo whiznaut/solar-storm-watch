@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Conda / virtual environments
+.env/
+.venv/
+env/
+venv/
+condaenv.*
+*.conda
+*.lock
+*.yaml 
+
+# Test / cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data files 
+data/raw/
+data/processed/
+data/*.db
+
+# Logs
+*.log
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.tar
