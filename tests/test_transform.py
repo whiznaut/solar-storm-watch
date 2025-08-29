@@ -7,7 +7,17 @@ def test_transform_creates_csv_file(tmp_path):
     input_path = tmp_path / "sample_test_input.json"
 
     with open(input_path, "w") as f:
-        json.dump([{"time_tag": "2025-01-01T00:00:00Z", "value": 42}], f)
+        json.dump([
+            {
+                "time_tag": "2025-01-01T00:00:00Z",
+                "satellite": "GOES-16",
+                "flux": 42.0,
+                "observed_flux": 41.5,
+                "electron_correction": 0.1,
+                "electron_contamination": 0.05,
+                "energy": "0.1-0.8nm"
+            }
+        ], f)
 
     assert os.path.exists(input_path), f"Missing test input file: {input_path}"
 
