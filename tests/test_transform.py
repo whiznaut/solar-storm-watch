@@ -2,8 +2,11 @@ import os
 import pandas as pd
 from src.transform import transform_data
 
-def test_transform_creates_csv_file():
-    input_path = "data/raw/sample_test_input.json"
+def test_transform_creates_csv_file(tmp_path):
+    input_path = tmp_path / "sample_test_input.json"
+
+    with open(input_path, "w") as f:
+        json.dump([{"timestamp": "2025-01-01T00:00:00Z", "value": 42}], f)
 
     assert os.path.exists(input_path), f"Missing test input file: {input_path}"
 
